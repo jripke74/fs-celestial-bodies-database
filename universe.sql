@@ -318,6 +318,7 @@ INSERT INTO public.planet VALUES (9, 'yours', 222224, 'ford-blue', 2);
 INSERT INTO public.planet VALUES (10, 'orrai', 221122, 'pink', 5);
 INSERT INTO public.planet VALUES (11, 'orthai', 342, 'beige', 1);
 INSERT INTO public.planet VALUES (12, 'quitet', 5633, 'midnight-blue', 6);
+INSERT INTO public.planet VALUES (13, 'yerrie', 2433, 'ford-blue', 3);
 
 
 --
