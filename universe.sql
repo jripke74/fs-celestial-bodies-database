@@ -85,8 +85,8 @@ ALTER SEQUENCE public.galaxy_galaxy_id_seq OWNED BY public.galaxy.galaxy_id;
 --
 
 CREATE TABLE public.moon (
-    name character varying(30) NOT NULL,
     moon_id integer NOT NULL,
+    name character varying(30) NOT NULL,
     age integer,
     color character varying(30),
     planet_id integer,
@@ -281,25 +281,26 @@ INSERT INTO public.galaxy VALUES (6, 'whatshouldicallit', 343423, 53433, 'purple
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
-INSERT INTO public.moon VALUES ('moon', 1, 4900, 'blue', 1, false);
-INSERT INTO public.moon VALUES ('oh', 2, 3900, 'green', 2, false);
-INSERT INTO public.moon VALUES ('ohno', 3, 34222, 'purple', 3, true);
-INSERT INTO public.moon VALUES ('oh2', 6, 2900, 'yellow', 3, false);
-INSERT INTO public.moon VALUES ('ohno2', 7, 24222, 'purple', 6, false);
-INSERT INTO public.moon VALUES ('oh2', 10, 5600, 'yellow', 3, false);
-INSERT INTO public.moon VALUES ('ohno2', 11, 2422, 'purple', 6, false);
-INSERT INTO public.moon VALUES ('oh3', 12, 433243, 'yellow', 3, false);
-INSERT INTO public.moon VALUES ('ohno52', 13, 24322, 'purple', 3, false);
-INSERT INTO public.moon VALUES ('yep', 14, 4233, 'black', 11, false);
-INSERT INTO public.moon VALUES ('ohno53', 15, 324322, 'purple', 3, false);
-INSERT INTO public.moon VALUES ('y', 16, 14213, 'black', 12, true);
-INSERT INTO public.moon VALUES ('moo', 17, 322, 'purple', 3, false);
-INSERT INTO public.moon VALUES ('y2', 18, 143213, 'green', 2, false);
-INSERT INTO public.moon VALUES ('moo2', 19, 32322, 'purple', 3, false);
-INSERT INTO public.moon VALUES ('y3', 20, 3032, 'green', 5, false);
-INSERT INTO public.moon VALUES ('moo3', 21, 24522, 'purple', 3, false);
-INSERT INTO public.moon VALUES ('y4', 23, 323212, 'red', 6, false);
-INSERT INTO public.moon VALUES ('moo4', 24, 3445, 'purple', 3, false);
+INSERT INTO public.moon VALUES (1, 'moon', 4900, 'blue', 1, false);
+INSERT INTO public.moon VALUES (2, 'oh', 3900, 'green', 2, false);
+INSERT INTO public.moon VALUES (3, 'ohno', 34222, 'purple', 3, true);
+INSERT INTO public.moon VALUES (4, 'oh2', 2900, 'yellow', 3, false);
+INSERT INTO public.moon VALUES (5, 'ohno2', 24222, 'purple', 6, false);
+INSERT INTO public.moon VALUES (6, 'oh2', 5600, 'yellow', 3, false);
+INSERT INTO public.moon VALUES (7, 'ohno2', 2422, 'purple', 6, false);
+INSERT INTO public.moon VALUES (8, 'oh3', 433243, 'yellow', 3, false);
+INSERT INTO public.moon VALUES (9, 'ohno52', 24322, 'purple', 3, false);
+INSERT INTO public.moon VALUES (10, 'yep', 4233, 'black', 11, false);
+INSERT INTO public.moon VALUES (11, 'ohno53', 324322, 'purple', 3, false);
+INSERT INTO public.moon VALUES (12, 'y', 14213, 'black', 12, true);
+INSERT INTO public.moon VALUES (13, 'moo', 322, 'purple', 3, false);
+INSERT INTO public.moon VALUES (14, 'y2', 143213, 'green', 2, false);
+INSERT INTO public.moon VALUES (15, 'moo2', 32322, 'purple', 3, false);
+INSERT INTO public.moon VALUES (16, 'y3', 3032, 'green', 5, false);
+INSERT INTO public.moon VALUES (17, 'moo3', 24522, 'purple', 3, false);
+INSERT INTO public.moon VALUES (18, 'y4', 323212, 'red', 6, false);
+INSERT INTO public.moon VALUES (19, 'moo4', 3445, 'purple', 3, false);
+INSERT INTO public.moon VALUES (20, 'moo4', 445, 'purple', 3, false);
 
 
 --
