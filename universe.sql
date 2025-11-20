@@ -88,7 +88,9 @@ CREATE TABLE public.moon (
     name character varying(30) NOT NULL,
     moon_id integer NOT NULL,
     age integer,
-    color character varying(30)
+    color character varying(30),
+    planet_id integer,
+    life boolean
 );
 
 
@@ -244,12 +246,42 @@ INSERT INTO public.galaxy VALUES (6, 'whatshouldicallit', 343423, 53433, 'purple
 -- Data for Name: moon; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.moon VALUES ('moon', 1, 4900, 'blue', 1, false);
+INSERT INTO public.moon VALUES ('oh', 2, 3900, 'green', 2, false);
+INSERT INTO public.moon VALUES ('ohno', 3, 34222, 'purple', 3, true);
+INSERT INTO public.moon VALUES ('oh2', 6, 2900, 'yellow', 3, false);
+INSERT INTO public.moon VALUES ('ohno2', 7, 24222, 'purple', 6, false);
+INSERT INTO public.moon VALUES ('oh2', 10, 5600, 'yellow', 3, false);
+INSERT INTO public.moon VALUES ('ohno2', 11, 2422, 'purple', 6, false);
+INSERT INTO public.moon VALUES ('oh3', 12, 433243, 'yellow', 3, false);
+INSERT INTO public.moon VALUES ('ohno52', 13, 24322, 'purple', 3, false);
+INSERT INTO public.moon VALUES ('yep', 14, 4233, 'black', 11, false);
+INSERT INTO public.moon VALUES ('ohno53', 15, 324322, 'purple', 3, false);
+INSERT INTO public.moon VALUES ('y', 16, 14213, 'black', 12, true);
+INSERT INTO public.moon VALUES ('moo', 17, 322, 'purple', 3, false);
+INSERT INTO public.moon VALUES ('y2', 18, 143213, 'green', 2, false);
+INSERT INTO public.moon VALUES ('moo2', 19, 32322, 'purple', 3, false);
+INSERT INTO public.moon VALUES ('y3', 20, 3032, 'green', 5, false);
+INSERT INTO public.moon VALUES ('moo3', 21, 24522, 'purple', 3, false);
+INSERT INTO public.moon VALUES ('y4', 23, 323212, 'red', 6, false);
+INSERT INTO public.moon VALUES ('moo4', 24, 3445, 'purple', 3, false);
 
 
 --
 -- Data for Name: planet; Type: TABLE DATA; Schema: public; Owner: freecodecamp
 --
 
+INSERT INTO public.planet VALUES (1, 'earth', 4300, 'blue', 1);
+INSERT INTO public.planet VALUES (2, 'pluto', 5333, 'black', 2);
+INSERT INTO public.planet VALUES (3, 'uranus', 324, 'purple', 3);
+INSERT INTO public.planet VALUES (4, 'mars', 42424, 'green', 4);
+INSERT INTO public.planet VALUES (5, 'venus', 34344, 'yellow', 5);
+INSERT INTO public.planet VALUES (6, 'orma', 343324, 'green-yellow', 6);
+INSERT INTO public.planet VALUES (8, 'hello', 223324, 'magenta', 2);
+INSERT INTO public.planet VALUES (9, 'yours', 222224, 'ford-blue', 2);
+INSERT INTO public.planet VALUES (10, 'orrai', 221122, 'pink', 5);
+INSERT INTO public.planet VALUES (11, 'orthai', 342, 'beige', 1);
+INSERT INTO public.planet VALUES (12, 'quitet', 5633, 'midnight-blue', 6);
 
 
 --
@@ -281,14 +313,14 @@ SELECT pg_catalog.setval('public.galaxy_galaxy_id_seq', 6, true);
 -- Name: moon_moon_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.moon_moon_id_seq', 1, false);
+SELECT pg_catalog.setval('public.moon_moon_id_seq', 24, true);
 
 
 --
 -- Name: planet_planet_id_seq; Type: SEQUENCE SET; Schema: public; Owner: freecodecamp
 --
 
-SELECT pg_catalog.setval('public.planet_planet_id_seq', 1, false);
+SELECT pg_catalog.setval('public.planet_planet_id_seq', 12, true);
 
 
 --
@@ -360,6 +392,14 @@ ALTER TABLE ONLY public.star
 
 ALTER TABLE ONLY public.star
     ADD CONSTRAINT star_pkey PRIMARY KEY (star_id);
+
+
+--
+-- Name: moon moon_planet_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: freecodecamp
+--
+
+ALTER TABLE ONLY public.moon
+    ADD CONSTRAINT moon_planet_id_fkey FOREIGN KEY (planet_id) REFERENCES public.planet(planet_id);
 
 
 --
